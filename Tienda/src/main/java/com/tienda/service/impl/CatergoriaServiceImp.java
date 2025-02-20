@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class CategoriaServiceImp implements CategoriaService {
+public class CatergoriaServiceImp implements CategoriaService {
     
     @Autowired
     private CategoriaDao categoriaDao;
