@@ -20,6 +20,7 @@ public class Categoria implements Serializable {
     private boolean activo;
 
     public Categoria() {
+        
     }
 
     public Categoria(String categoria, boolean activo) {
