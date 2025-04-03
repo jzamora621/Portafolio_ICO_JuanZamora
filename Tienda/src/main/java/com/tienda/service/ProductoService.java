@@ -1,14 +1,22 @@
 package com.tienda.service;
 
-import com.tienda.domain.Categoria;
 import com.tienda.domain.Producto;
 import java.util.List;
 
 public interface ProductoService {
-    
-    // Se obtiene un listado de categorias en un List
-    public List<Categoria> getProducto(boolean activos);
-    
+
+     public List<Producto> getProductos(boolean activo);
+
+    // Se obtiene un Producto, a partir del id de un producto
+    public Producto getProducto(Producto producto);
+
+    // Se inserta un nuevo producto si el id del producto esta vacío
+    // Se actualiza un producto si el id del producto NO esta vacío
+    public void save(Producto producto);
+
+    // Se elimina el producto que tiene el id pasado por parámetro
+    public void delete(Producto producto);
+
     // Lista de productos con precio entre ordendados por descripción ConsultaAmpliada
     public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
 
@@ -17,7 +25,5 @@ public interface ProductoService {
 
     //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(double precioInf, double precioSup);
-
-    public Object getProducto(Producto producto);
  
 }
